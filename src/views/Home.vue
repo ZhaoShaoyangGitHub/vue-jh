@@ -168,16 +168,17 @@
         <div class="home-pagination swiper-pagination" slot="pagination"></div>
       </swiper>
     </div>
+    <Sidebar></Sidebar>
   </div>
 </template>
 
 <script>
   import Head from '@/components/head'
   import Foot from '@/components/foot'
+  import Sidebar from '@/components/Sidebar'
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import countTo from 'vue-count-to'
   import { banner, partner } from '@/api/home.js'
-  import 'element-ui/lib/theme-chalk/base.css'
 
   export default {
     name: 'home',
@@ -239,6 +240,7 @@
     components: {
       Head,
       Foot,
+      Sidebar,
       swiper,
       swiperSlide,
       countTo
@@ -250,7 +252,7 @@
           _this.bannerList = res.data
         })
       },
-      // 搜索...
+      // 搜索
       keywordsSubmit () {
         if (this.keyword === null || this.keyword === '') {
           this.$message.warning('关键字不能为空');
