@@ -1,6 +1,6 @@
 const path = require('path')
 
-function resolve(dir) {
+function resolve (dir) {
   return path.join(__dirname, './', dir)
 }
 
@@ -120,7 +120,7 @@ module.exports = {
   },
 
   devServer: {
-    proxy: "http://ip-29-jihuokeji-swagger.coralcodes.com/",
+    proxy: 'http://ip-29-jihuokeji-swagger.coralcodes.com/'
     // port: 3000
   }
 }

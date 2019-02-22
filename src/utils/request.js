@@ -1,6 +1,10 @@
 import axios from 'axios'
 import store from '@/store'
 import Qs from 'qs'
+import router from '@/router'
+import Vue from 'vue'
+import { Message } from 'element-ui'
+Vue.use(Message)
 
 // 创建axios 实例
 const service = axios.create({
@@ -56,8 +60,12 @@ service.interceptors.response.use(
     // 这里处理一些response 正常放回时的逻辑
     if (res.code !== 'OK') {
       if (res.code === 'Unauthorized') {
-        // router.push('/login')
+        router.push('/login')
       } else {
+        Message.error({
+          showClose: true,
+          message: res.message
+        });
         return res
       }
       return Promise.resolve()

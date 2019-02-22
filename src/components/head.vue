@@ -9,7 +9,7 @@
           <a class="nav-link" href="/">首页</a>
         </li>
         <li class="nav-item" :class="navigation==2?'active':''">
-          <a class="nav-link" href="/professional">专家</a>
+          <a class="nav-link" href="/experts">专家</a>
         </li>
         <li class="nav-item" :class="navigation==3?'active':''">
           <a class="nav-link" href="/enterprise">企业</a>
@@ -39,11 +39,11 @@
           <a href="/user/demand/1">我的需求</a>
           <a href="/user/collect">我的收藏</a>
           <a href="/user/buy">我的购买</a>
-          <a  @click="quit">退出登录</a>
+          <a href="javascript:;" @click="logout()">退出登录</a>
         </div>
       </div>
-      <div class="float-right user-option" >
-        <a class="search-btn js-search" v-if="navigation!=11" v-bind:style="!isLogin?'margin-left: -2.8rem':'margin-left: -0.8rem'" href="javascript:;">搜索</a>
+      <div class="float-right user-option clearfix">
+        <a class="search-btn js-search" v-if="navigation!=1" href="javascript:;">搜索</a>
         <a v-if="!isLogin" class="logo-btn" href="/login">登录</a>
         <a v-if="!isLogin" class="register-btn" href="/registerPhone">注册</a>
       </div>
@@ -76,8 +76,19 @@ export default {
     }
   },
   mounted () {},
-  created () {},
-  methods: {}
+  created () {
+    this.isLogin = localStorage.getItem('auth_token')
+  },
+  methods: {
+    logout () {
+      window.localStorage.removeItem('auth_token')
+      if (this.navigation === 1) {
+        location.reload()
+      } else {
+        this.$router.push('/')
+      }
+    }
+  }
 }
 </script>
 

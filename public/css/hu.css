@@ -1150,8 +1150,12 @@
     padding: .05rem .1rem
 }
 
+.login-page .login-box .right .item .send_code {
+    min-width: 0.92rem;
+}
+
 .login-page .login-box .right .confirm button {
-    width: 320px;
+    width: 100%;
     height: 40px;
     border-radius: 5px;
     background-color: #bd263b;

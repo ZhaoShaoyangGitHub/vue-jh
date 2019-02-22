@@ -1,5 +1,5 @@
 <template>
-  <div class="min-height">
+  <div class="minHeight">
     <Head :headerActive="headerActive"></Head>
     <div class="home">
       <swiper class="jh-home" ref="homeSwiper" :options="homeSwiperOptions">

@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import * as common from './utils/common'
-import { Message, Dialog, Tabs, TabPane } from 'element-ui'
+import { Message, Dialog, Tabs, TabPane, Cascader } from 'element-ui'
 import 'element-ui/lib/theme-chalk/base.css'
 
 Vue.config.productionTip = false
@@ -16,6 +16,7 @@ Vue.use(Message)
 Vue.use(Dialog)
 Vue.use(Tabs)
 Vue.use(TabPane)
+Vue.use(Cascader)
 Vue.prototype.$message = Message
 Vue.prototype.$dialog = Dialog
 
