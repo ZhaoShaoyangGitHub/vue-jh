@@ -13,6 +13,7 @@
             <div class="expert-category">
               <div class="title">专家类别</div>
             </div>
+            <HotExperts></HotExperts>
           </div>
         </div>
       </div>
@@ -26,6 +27,7 @@
   import Head from '@/components/head'
   import Foot from '@/components/foot'
   import Sidebar from '@/components/Sidebar'
+  import HotExperts from '@/components/HotExperts'
   export default {
     name: 'experts',
     data() {
@@ -36,7 +38,8 @@
     components: {
       Head,
       Foot,
-      Sidebar
+      Sidebar,
+      HotExperts
     },
   }
 </script>
