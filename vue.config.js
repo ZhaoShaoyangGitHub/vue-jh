@@ -120,7 +120,7 @@ module.exports = {
   },
 
   devServer: {
-    proxy: 'http://ip-29-jihuokeji-swagger.coralcodes.com/'
-    // port: 3000
+    proxy: 'http://ip-29-jihuokeji-swagger.coralcodes.com/',
+    port: 3000
   }
 }

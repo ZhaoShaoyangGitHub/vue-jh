@@ -11695,7 +11695,7 @@ body {
 }
 
 .jh-head .header-nav .nav-item:hover {
-    overflow: initial
+    overflow: inherit
 }
 
 .jh-head .header-nav .nav-item:hover .dropdown {
