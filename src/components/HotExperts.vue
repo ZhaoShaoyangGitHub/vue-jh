@@ -14,11 +14,11 @@
           <p>所属机构：{{item.organizationTitle}}</p>
           <p>专业领域：{{item.professionalFieldTitle}}</p>
         </div>
-        <div class="expert-tags">
-          <span v-for="(val ,i) in item.tag" :key='i'>{{val}}</span>
+        <div class="expert-tags" v-if="JSON.parse(item.tag).length">
+          <span v-for="(val ,i) in JSON.parse(item.tag)" :key='i'>{{val}}</span>
         </div>
         <div class="text-right">
-          <a href="javascript:;">
+          <a href="javascript:;" class="check-detail">
             <span>查看详情</span>
             <i class="icon_more"></i>
           </a>
@@ -45,10 +45,9 @@
         let _this = this;
         hotList().then(res => {
           _this.expertsList = res.data;
-          console.log(_this.expertsList);
         })
       }
-    },
+    }
   }
 </script>
 

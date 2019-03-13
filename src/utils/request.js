@@ -48,7 +48,7 @@ service.interceptors.request.use(
     setTimeout(function () {
       store.dispatch('SetLoading', 0)
     }, 300)
-    Promise.reject(error)
+    return Promise.reject(error)
   }
 
 )
@@ -79,7 +79,6 @@ service.interceptors.response.use(
     // 这里处理一些response 出错时的逻辑
     // loading - 1
     store.dispatch('SetLoading', false)
-
     return Promise.reject(error)
   }
 )
