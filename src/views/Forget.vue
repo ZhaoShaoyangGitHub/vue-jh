@@ -63,7 +63,7 @@
 </template>
 
 <script>
-import Head from "@/components/head";
+import Head from "@/components/Head";
 import Sidebar from "@/components/Sidebar";
 import { loginMixins } from "@/mixins/index";
 import { existence, forgetPassword } from "@/api/login";
@@ -81,11 +81,11 @@ export default {
   methods: {
     verification () {
       let _this = this;
-      if (_this.userName == null || _this.userName == "") {
+      if (_this.userName == null || _this.userName === "") {
         this.$message.error("请输入手机号码/邮箱");
         return false;
       } else {
-        if (_this.userName.indexOf("@") != -1) {
+        if (_this.userName.indexOf("@") !== -1) {
           if (
             !/^([a-z0-9A-Z]+[-|_|\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\.)+[a-zA-Z]{2,}$/.test(
               _this.userName

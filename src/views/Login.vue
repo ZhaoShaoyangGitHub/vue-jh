@@ -41,7 +41,7 @@
 </template>
 
 <script>
-import Head from '@/components/head'
+import Head from '@/components/Head'
 import Sidebar from '@/components/Sidebar'
 import { login } from '@/api/login'
 

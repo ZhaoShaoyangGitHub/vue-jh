@@ -173,8 +173,8 @@
 </template>
 
 <script>
-  import Head from '@/components/head'
-  import Foot from '@/components/foot'
+  import Head from '@/components/Head'
+  import Foot from '@/components/Foot'
   import Sidebar from '@/components/Sidebar'
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   import countTo from 'vue-count-to'

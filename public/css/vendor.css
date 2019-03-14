@@ -11752,6 +11752,7 @@ body {
     height: .28rem;
     position: relative;
     margin-top: .25rem;
+    margin-left: .3rem;
     cursor: pointer;
     background: url(../images/user-default-avatar.png) no-repeat center/contain;
     overflow: hidden
@@ -12985,10 +12986,6 @@ body {
 }
 
 .expert .expert-category .list .list-item {
-    margin-bottom: .15rem
-}
-
-.expert .expert-category .list .list-item .content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -13000,6 +12997,7 @@ body {
     border-radius: .05rem;
     overflow: hidden;
     padding: 0 .2rem;
+    margin-bottom: .15rem;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -13007,7 +13005,8 @@ body {
     -ms-flex-align: center;
     align-items: center;
     position: relative;
-    background-color: #000
+    background-color: #000;
+    cursor: pointer
 }
 
 .expert .expert-category .list .list-item .main {
@@ -13115,8 +13114,7 @@ body {
 
 .expert-layer {
     width: 5.6rem;
-    height: 7rem;
-    display: none;
+    background: #FFFFFF;
 }
 
 .expert-layer .close-layer {
@@ -13127,45 +13125,23 @@ body {
     z-index: 2
 }
 
-.expert-layer .clearfix {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+.expert-layer .el-tabs {
     width: 100%;
-    height: 100%
+    height: 6.2rem;
 }
 
-.expert-layer .left {
+.expert-layer .el-tabs--left .el-tabs__header.is-left {
     width: 1.64rem;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 1.64rem;
-    flex: 1 1 1.64rem;
     border-right: 1px solid #eee;
-    height: 100%
-}
-
-.expert-layer .right {
-    width: 3.96rem;
     height: 100%;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 3.96rem;
-    flex: 1 1 3.96rem
+    padding: 0;
+    margin-right: 0
+}
+.expert-layer .el-tabs__nav  {
+    padding: 0;
 }
 
-.expert-layer .title {
-    font-size: .16rem;
-    text-align: center;
-    line-height: .21rem;
-    padding: .3rem 0 .15rem;
-    color: #333;
-    font-weight: 700
-}
-
-.expert-layer .nav {
-    width: 100%
-}
-
-.expert-layer .nav .nav-link {
+.expert-layer .el-tabs__nav .el-tabs__item {
     width: 100%;
     height: .5rem;
     font-size: .16rem;
@@ -13178,24 +13154,52 @@ body {
     position: relative
 }
 
-.expert-layer .nav .nav-link:after {
+.expert-layer .el-tabs__nav .el-tabs__item:after {
     content: '';
     position: absolute;
     width: .08rem;
     height: .14rem;
+    left: inherit;
     right: .2rem;
     top: 50%;
     margin-top: -.07rem;
     background: url(../images/icon-next-03.png) no-repeat center/contain
 }
 
-.expert-layer .nav .nav-link.active {
+.expert-layer .el-tabs__nav .el-tabs__item.is-active {
     background-color: #bd263b;
     color: #fff
 }
 
-.expert-layer .nav .nav-link.active:after {
+.expert-layer .el-tabs__nav .el-tabs__item.is-active:after {
+    position: absolute;
+    width: .08rem;
+    height: .14rem;
+    left: inherit;
+    right: .2rem;
+    top: 50%;
+    margin-top: -.07rem;
     background: url(../images/icon-next-02.png) no-repeat center/contain
+}
+
+.expert-layer .el-tabs__content {
+    width: 3.96rem;
+    height: 100%;
+    overflow: auto;
+}
+
+.expert-layer .el-tabs__nav-wrap::after {
+    display: none;
+}
+
+.expert-layer .title {
+    width: 1.64rem;
+    font-size: .16rem;
+    text-align: center;
+    line-height: .21rem;
+    padding: .3rem 0 .15rem;
+    color: #333;
+    font-weight: 700
 }
 
 .expert-layer .top {

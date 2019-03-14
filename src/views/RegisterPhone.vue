@@ -73,7 +73,7 @@
 </template>
 
 <script>
-import Head from "@/components/head"
+import Head from "@/components/Head"
 import Sidebar from "@/components/Sidebar"
 import { loginMixins } from "@/mixins/index"
 export default {

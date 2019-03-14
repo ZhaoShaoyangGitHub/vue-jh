@@ -15,3 +15,12 @@ export const expertCategory = () => {
         method: 'get'
     })
 }
+
+// 行业列表
+export const categoryList = (params) => {
+    return request({
+        'url': '/api/common/category',
+        method: 'get',
+        params: params
+    })
+}
